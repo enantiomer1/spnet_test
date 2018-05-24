@@ -11,6 +11,8 @@ class User extends Authenticatable
     use Notifiable;
     use HasRoleAndPermission;
 
+    protected $table = 'users';
+    public $timestamps = true;
 
     /**
      * The attributes that are mass assignable.
@@ -18,7 +20,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'username', 'email', 'password',
     ];
 
     /**
@@ -29,4 +31,15 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function posts()
+    {
+        return $this->hasMany('App\User');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany('App\User');
+    }
+
 }
