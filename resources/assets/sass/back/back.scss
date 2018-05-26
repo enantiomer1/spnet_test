@@ -2,12 +2,17 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300");
 
 @import "simpleMde";
+
 // Variables
 @import "variables";
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+.box-shadow {
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: #fff;
 }

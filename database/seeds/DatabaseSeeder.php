@@ -18,6 +18,10 @@ class DatabaseSeeder extends Seeder
             $this->call('RolesTableSeeder');
             $this->call('ConnectRelationshipsSeeder');
             $this->call('UsersTableSeeder');
+            $this->call('CategoryTableSeeder');
+            $this->call('TagTableSeeder');
+            $this->call('PostTableSeeder');
+            $this->call('CommentTableSeeder');
 
         Model::reguard();
     }

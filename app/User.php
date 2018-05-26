@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Post;
+use App\Comment;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use jeremykenedy\LaravelRoles\Traits\HasRoleAndPermission;
@@ -32,14 +34,24 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    /**
+     * One to Many relation
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function posts()
     {
-        return $this->hasMany('App\User');
+        return $this->hasMany(Post::class);
     }
 
+    /**
+     * One to Many relation
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function comments()
     {
-        return $this->hasMany('App\User');
+        return $this->hasMany(Comment::class);
     }
 
 }

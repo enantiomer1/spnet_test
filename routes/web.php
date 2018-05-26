@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('front.home');
-});
+Route::get('/', 'FrontController@home')->name('home');
 
 Auth::routes();
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/dashboard', 'FrontController@dashboard')->name('dashboard');
+
+Route::get('/admin', 'AdminController@admin')->name('admin');
+Route::get('/create-post', 'AdminController@postcreate')->name('post.create');
+Route::post('/post.store', 'AdminController@poststore')->name('post.store');

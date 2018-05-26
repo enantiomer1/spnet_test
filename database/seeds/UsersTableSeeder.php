@@ -17,9 +17,9 @@ class UsersTableSeeder extends Seeder
     {
 
 
-        $userRole 			= Role::where('name', '=', 'User')->first();
-        $adminRole 			= Role::where('name', '=', 'Admin')->first();
-		$permissions 		= Permission::all();
+        $userRole = Role::where('name', '=', 'User')->first();
+        $adminRole = Role::where('name', '=', 'Admin')->first();
+		$permissions = Permission::all();
 
 	    /**
 	     * Add Users
