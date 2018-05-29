@@ -40,7 +40,7 @@
                 </div>
                 <div class="form-group">
                     <label for="content">Content</label>
-                    <input type="textarea" id="markdown-editor" name="content" id="content" cols="5" rows="5" class="form-control markdown-editor" value={{old('content')}}>
+                    <textarea name="content" id="content" rows="10" class="form-control" value={{old('content')}}></textarea>
                 </div>
                 <div><h5>Publish or Save as Draft?</h5>            	
                 </div>

@@ -16,6 +16,4 @@ mix
     .js('resources/assets/js/back/back.js', 'public/js')
     .sass('resources/assets/sass/front/front.scss', 'public/css')
     .sass('resources/assets/sass/back/back.scss', 'public/css');
-mix.browserSync({
-    proxy: 'test.dev'
-});
+

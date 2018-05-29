@@ -13,8 +13,6 @@
         "axios": "^0.18",
         "bootstrap": "^4.0.0",
         "popper.js": "^1.12",
-        "browser-sync": "^2.23.2",
-        "browser-sync-webpack-plugin": "^1.2.0",
         "cross-env": "^5.1",
         "jquery": "^3.2",
         "laravel-mix": "^2.0",
@@ -22,6 +20,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
-        "simplemde": "^1.11.2"
+        "codemirror": "^5.38.0",
+        "summernote": "^0.8.10"
     }
 }
