@@ -13,6 +13,8 @@ try {
 
     require('bootstrap');
     require('summernote');
+    require('codemirror');
+    require('codemirror/mode/htmlembedded/htmlembedded');
 } catch (e) {}
 
 /**
