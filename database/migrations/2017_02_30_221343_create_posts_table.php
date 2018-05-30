@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration {
 			$table->boolean('comments')->index()->default(0);
 			$table->boolean('featured')->index()->default(0);
             $table->string('author')->default('Admin');
-            $table->string('image')->nullable();
+            $table->string('cover_image')->nullable();
 			$table->timestamps();
 			$table->softDeletes();
 		});

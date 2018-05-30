@@ -31,6 +31,7 @@ class UsersTableSeeder extends Seeder
 	            'username' => 'Admin',
 	            'email' => 'admin@admin.com',
 	            'password' => bcrypt('password'),
+	            'confirmed' => 1,
 	        ]);
 
 	        $newUser->attachRole($adminRole);
@@ -46,6 +47,7 @@ class UsersTableSeeder extends Seeder
 	            'username' => 'User',
 	            'email' => 'user@user.com',
 	            'password' => bcrypt('password'),
+	            'confirmed' => 1,
 	        ]);
 
 	        $newUser;

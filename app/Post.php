@@ -21,7 +21,7 @@ class Post extends Model
     public $timestamps = true;
 
     protected $fillable = [
-        'title', 'slug', 'summary', 'content', 'user_id', 'status',
+        'title', 'slug', 'summary', 'content', 'user_id', 'status', 'cover_image',
     ];
     /**
      * Return the sluggable configuration array for this model.

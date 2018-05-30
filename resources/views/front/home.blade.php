@@ -9,6 +9,7 @@
                 <div class="card-body">
                     @if($posts->count() > 0)
                         @foreach($posts as $post)
+                            <img style="width:200px" src="/storage/cover_images/{{$post->cover_image}}" class="img-fluid img-thumbnail" alt="{{ $post->slug }}">
                             <h3>{{ $post->title }}</h3>
                             <hr>
                             <p>{!! $post->content !!}</p>                       

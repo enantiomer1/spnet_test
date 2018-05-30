@@ -38,6 +38,12 @@
                     <label for="summary">Summary</label>
                     <input type="text" name="summary" class="form-control" value={{old('summary')}}>
                 </div>
+
+              <div class="form-group">
+                <label for="cover_image">Select Image File for Featured Image</label>
+                <input type="file" name="cover_image" class="form-control-file" id="cover_image" value={{old('cover_image')}}>
+              </div>
+
                 <div class="form-group">
                     <label for="content">Content</label>
                     <textarea name="content" id="content" rows="10" class="form-control" value={{old('content')}}></textarea>

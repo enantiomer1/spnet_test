@@ -81,15 +81,33 @@ class AdminController extends Controller
       'content' => 'required',
       'category_id' => 'required',
       'tags' => 'required',
-      'status' => 'required'
+      'status' => 'required',
+      'cover_image' => 'image|nullable|max:1999'
   ]);
+
+    // Handle File Upload
+    if($request->hasFile('cover_image')){
+        // Get filename with the extension
+        $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+        // Get just filename
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+        // Get just ext
+        $extension = $request->file('cover_image')->getClientOriginalExtension();
+        // Filename to store
+        $fileNameToStore= $filename.'_'.time().'.'.$extension;
+        // Upload Image
+        $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
+    } else {
+        $fileNameToStore = 'noimage.jpg';
+    }
 
     $post = Post::create([
       'title' => $request->title,
       'summary' => $request->summary,
       'content' => $request->content,
       'user_id' => auth()->id(),
-      'status' => $request->status
+      'status' => $request->status,
+      'cover_image' => $fileNameToStore
       ]);
 
     $post->tags()->attach($request->tags);
