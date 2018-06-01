@@ -7,6 +7,8 @@
 
 require('./bootstrap');
 
+require('./now');
+
 $(document).ready(function() {
   $('#content').summernote();
 });

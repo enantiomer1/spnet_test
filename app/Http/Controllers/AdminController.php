@@ -20,7 +20,7 @@ class AdminController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['auth', 'role:admin']);
     }
 
   /**
@@ -35,14 +35,14 @@ class AdminController extends Controller
     $roles = Role::all();
     $posts = Post::all();
 
-    if ($user->isAdmin()) {
+    // if ($user->isAdmin()) {
       
       return view('back.admin', compact('users', 'roles', 'posts'));
     
     }
 
-      return redirect()->route('home')->withFlashDanger('You Do Not Have Access to that Area.');
-  }
+  //     return redirect()->route('home')->withFlashDanger('You Do Not Have Access to that Area.');
+  // }
 
 
   /**

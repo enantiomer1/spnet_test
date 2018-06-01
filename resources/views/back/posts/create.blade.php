@@ -1,8 +1,9 @@
 @extends('back.layouts.app') 
 
 @section('content')
+<div class="content">
     <div class="card">
-        <div class="card-header bg-secondary text-white font-weight-bold">
+        <div class="card-header">
            {{ __('Creat New Article') }}
         </div>
         <div class="card-body">
@@ -70,4 +71,5 @@
             </form>
         </div>
     </div>
+</div>
 @stop
