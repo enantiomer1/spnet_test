@@ -42,7 +42,7 @@
 
               <div class="form-group">
                 <label for="cover_image">Select Image File for Featured Image</label>
-                <input type="file" name="cover_image" class="form-control-file" id="cover_image" value={{old('cover_image')}}>
+                <input type="file" name="cover_image" class="form-control-file" id="cover_image" value={{old('cover_image')}}></input>
               </div>
 
                 <div class="form-group">

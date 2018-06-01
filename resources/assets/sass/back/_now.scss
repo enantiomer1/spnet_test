@@ -1324,7 +1324,7 @@ fieldset[disabled] .btn-link.active {
 
 .form-control {
   background-color: transparent;
-  border: 1px solid #E3E3E3;
+  border: 1px solid #bfc2c5;
   border-radius: 30px;
   color: #2c2c2c;
   line-height: normal;
@@ -1393,7 +1393,7 @@ fieldset[disabled] .btn-link.active {
 .has-success .input-group-append .input-group-text,
 .has-success .input-group-prepend .input-group-text,
 .has-success .form-control {
-  border-color: #E3E3E3;
+  border-color: #bfc2c5;
 }
 
 .has-success .form-control:focus,
@@ -1618,7 +1618,7 @@ fieldset[disabled] .btn-link.active {
 .input-group-append .input-group-text,
 .input-group-prepend .input-group-text {
   background-color: transparent;
-  border: 1px solid #E3E3E3;
+  border: 1px solid #bfc2c5;
   border-radius: 30px;
   color: #888;
   -webkit-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -1703,7 +1703,7 @@ fieldset[disabled] .btn-link.active {
 
 .input-group[disabled] .input-group-prepend .input-group-text,
 .input-group[disabled] .input-group-append .input-group-text {
-  background-color: #E3E3E3;
+  background-color: #bfc2c5;
 }
 
 .input-group .form-control:not(:first-child):not(:last-child),
@@ -1729,7 +1729,7 @@ fieldset[disabled] .btn-link.active {
 .form-control[disabled],
 .form-control[readonly],
 fieldset[disabled] .form-control {
-  background-color: #E3E3E3;
+  background-color: #bfc2c5;
   color: #888;
   cursor: not-allowed;
 }
@@ -1753,7 +1753,7 @@ textarea.form-control {
   padding: 10px 10px 0 0;
   resize: none;
   border: none;
-  border-bottom: 1px solid #E3E3E3;
+  border-bottom: 1px solid #bfc2c5;
   border-radius: 0;
   line-height: 2;
 }
@@ -1781,18 +1781,6 @@ textarea.form-control:active {
 
 .input-group .input-group-btn {
   padding: 0 12px;
-}
-
-.form-group input[type=file] {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
 }
 
 .form-text {
@@ -1986,7 +1974,7 @@ a.text-danger:hover {
 .text-gray,
 a.text-gray:focus,
 a.text-gray:hover {
-  color: #E3E3E3 !important;
+  color: #bfc2c5 !important;
 }
 
 .blockquote {
@@ -2169,7 +2157,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   border-radius: 3px;
   top: 0;
   background-color: transparent;
-  border: 1px solid #E3E3E3;
+  border: 1px solid #bfc2c5;
   -webkit-transition: opacity 0.3s linear;
   -moz-transition: opacity 0.3s linear;
   -o-transition: opacity 0.3s linear;
@@ -2223,7 +2211,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 1px solid #E3E3E3;
+  border: 1px solid #bfc2c5;
   display: inline-block;
   position: absolute;
   left: 3px;
@@ -4164,7 +4152,7 @@ img {
   position: relative;
   float: right;
   width: calc(100% - 260px);
-  background-color: #E3E3E3;
+  background-color: #bfc2c5;
   background-color: #ebecf1;
   -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -4669,9 +4657,9 @@ img {
 }
 
 .card label {
-  font-size: 0.8571em;
+  font-size: 0.9em;
   margin-bottom: 5px;
-  color: #9A9A9A;
+  color: #777;
 }
 
 .card .card-footer {
