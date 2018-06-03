@@ -37,6 +37,6 @@ class VerifyRole
             return $next($request);
         }
 
-        return redirect()->route('home')->withFlashDanger('You Do Not Have Access to that Area.');
+        return redirect()->back()->withFlashDanger('You Do Not Have Access to that Area.');
     }
 }

@@ -7,15 +7,11 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-@import "now";
+@import "now-back";
 
 @import '~summernote/dist/summernote-bs4';
 
 @import '~codemirror/lib/codemirror';
-
-.box-shadow {
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-}
 
 .navbar-dark .navbar-nav .nav-link {
     color: #fff;

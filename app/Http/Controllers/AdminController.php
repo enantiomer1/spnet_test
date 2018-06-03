@@ -34,16 +34,9 @@ class AdminController extends Controller
     $users = User::all();
     $roles = Role::all();
     $posts = Post::all();
-
-    // if ($user->isAdmin()) {
       
       return view('back.admin', compact('users', 'roles', 'posts'));
-    
     }
-
-  //     return redirect()->route('home')->withFlashDanger('You Do Not Have Access to that Area.');
-  // }
-
 
   /**
    * Show the form for creating a new resource.
@@ -61,11 +54,7 @@ class AdminController extends Controller
         return redirect()->back()->withFlashInfo('You must have some categories and tags before attempting to create a post.'); 
     }
     
-    if ($user->isAdmin()) {
     return view('back.posts.create', compact('categories', 'tags', 'post'));
-    }   
-
-    return redirect()->route('home')->withFlashDanger('You Do Not Have Access to that Area.'); 
   }
 
   /**

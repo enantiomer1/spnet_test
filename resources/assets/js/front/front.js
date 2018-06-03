@@ -7,3 +7,6 @@
 
 require('./bootstrap');
 
+require('./now-front');
+
+require('./switch');

@@ -2,15 +2,15 @@
 <html lang="{{ app()->getLocale() }}">
 @include('front.partials.head')
 
-<body>
-    <div id="app">
-        @include('front.partials.nav')
-        <main class="py-4">
-        	<div class="container">
-        		@include('partials.errors')
-        		@yield('content')
-        	</div>
-       </main>
+<body class="sidebar-collapse">
+    @include('front.partials.nav') 
+    <div class="wrapper">
+    @include('front.partials.page-header')    
+        <div class="main">
+            @include('partials.errors') 
+            @yield('content') 
+        </div>
     </div>
+     @include('front.partials.footer')
 </body>
 </html>

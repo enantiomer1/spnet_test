@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'FrontController@home')->name('home');
+Route::get('/', 'FrontController@home');
 
 Auth::routes();
 

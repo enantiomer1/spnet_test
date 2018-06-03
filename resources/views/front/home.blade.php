@@ -1,24 +1,38 @@
-@extends('front.layouts.app')
+@extends('front.layouts.app-home')
 
 @section('content')
-    <div class="row justify-content-center">
+ 
+    <div class="section">
+        <div class="container">
+        <div class="row justify-content-center">
+        <h2 class="title pb-4">{{ __('Latest Articles') }}</h2>
         <div class="col-md-12">
-            <div class="card">
-                <div class="card-header bg-secondary text-white font-weight-bold">Home</div>
+            <div class="card mt-2">
+                <div class="card-header">{{ __('From the Blog') }}</div>
 
                 <div class="card-body">
-                    @if($posts->count() > 0)
-                        @foreach($posts as $post)
-                            <img style="width:200px" src="/storage/cover_images/{{$post->cover_image}}" class="img-fluid img-thumbnail" alt="{{ $post->slug }}">
-                            <h3>{{ $post->title }}</h3>
-                            <hr>
-                            <p>{!! $post->content !!}</p>                       
-                        @endforeach
+                @if($posts->count() > 0)
+                    @foreach($posts as $post)
+                      <div class="row pb-2">
+                        <div class="col-md-4">
+                          <a href="#">
+                            <img class="img-fluid box-shadow rounded mb-3 mb-md-0" src="/storage/cover_images/{{$post->cover_image}}" alt="{{ $post->slug }}" style="width:350px; height:200px">
+                          </a>
+                        </div>
+                        <div class="col-md-8">
+                          <h4>{{ $post->title }}</h4>
+                          <p>{{ $post->summary }}</p>
+                          <a class="btn btn-primary box-shadow" href="#">{{ __('Read More') }}</a>
+                        </div>
+                      </div>
+                      <hr>
+                    @endforeach
                     @else
                        <h3>{{ __('No Posts') }}</h3>
                     @endif
                 </div>
             </div>
         </div>
-    </div>
+    </div>         
+        
 @endsection

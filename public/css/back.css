@@ -10777,7 +10777,7 @@ Copyright (c) 2015 Daniel Eden
 .navbar .navbar-nav > a.btn {
   border-width: 2px;
   font-weight: 400;
-  font-size: 0.8571em;
+  font-size: 1em;
   line-height: 1.35em;
   border: none;
   margin: 10px 1px;
@@ -11774,10 +11774,10 @@ fieldset[disabled] .btn-link.active {
 .form-control {
   background-color: transparent;
   border: 1px solid #bfc2c5;
-  border-radius: 30px;
+  border-radius: 5px;
   color: #2c2c2c;
   line-height: normal;
-  font-size: 0.8571em;
+  font-size: 1em;
   -webkit-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   -webkit-box-shadow: none;
@@ -12347,7 +12347,7 @@ textarea.form-control:active {
 }
 
 .form-text {
-  font-size: 0.8571em;
+  font-size: 1em;
 }
 
 .form-control-lg,
@@ -12555,7 +12555,7 @@ a.text-gray:hover {
 
 .blockquote small {
   color: #888;
-  font-size: 0.8571em;
+  font-size: 1em;
   text-transform: uppercase;
 }
 
@@ -12692,7 +12692,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   display: inline-block;
   position: relative;
   cursor: pointer;
-  padding-left: 35px;
+  padding-left: 5px;
   line-height: 26px;
   margin-bottom: 0;
   -webkit-transition: color 0.3s linear;
@@ -13021,7 +13021,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
 
 .navbar .navbar-brand {
   text-transform: uppercase;
-  font-size: 0.8571em;
+  font-size: 1em;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   line-height: 1.625rem;
@@ -13282,7 +13282,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
 
 .dropdown-menu .dropdown-item,
 .bootstrap-select .dropdown-menu.inner li a {
-  font-size: 0.8571em;
+  font-size: 1em;
   padding-top: .6rem;
   padding-bottom: .6rem;
   margin-top: 5px;
@@ -14393,7 +14393,7 @@ img {
   position: relative;
   text-transform: uppercase;
   cursor: pointer;
-  font-size: 0.7142em;
+  font-size: 1em;
   padding: 10px 8px;
   line-height: 1.625rem;
 }
@@ -14407,7 +14407,7 @@ img {
 .sidebar .nav li:focus:not(.active) > a,
 .off-canvas-sidebar .nav li:hover:not(.active) > a,
 .off-canvas-sidebar .nav li:focus:not(.active) > a {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .sidebar .nav li:hover:not(.active) > a i,
@@ -14442,7 +14442,7 @@ img {
   line-height: 30px;
   width: 34px;
   text-align: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: #f2f2f2;
   position: relative;
 }
 
@@ -14572,7 +14572,7 @@ img {
 
 .sidebar[data-color="blue"]:after,
 .off-canvas-sidebar[data-color="blue"]:after {
-  background: #445877;
+  background: #2CA8FF;
 }
 
 .sidebar[data-color="blue"] .nav li.active > a,
@@ -14762,7 +14762,7 @@ img {
 .footer ul li a {
   color: inherit;
   padding: 0.5rem;
-  font-size: 0.8571em;
+  font-size: 1em;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -14772,7 +14772,7 @@ img {
 }
 
 .footer .copyright {
-  font-size: 0.8571em;
+  font-size: 1em;
   line-height: 1.8;
 }
 
@@ -15167,7 +15167,7 @@ img {
 }
 
 .card label {
-  font-size: 0.9em;
+  font-size: 1em;
   margin-bottom: 5px;
   color: #777;
 }
@@ -17269,11 +17269,6 @@ div.CodeMirror-dragcursors {
 
 span.CodeMirror-selectedtext {
   background: none;
-}
-
-.box-shadow {
-  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-dark .navbar-nav .nav-link {

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 39);
+/******/ 	return __webpack_require__(__webpack_require__.s = 41);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -45533,14 +45533,16 @@ module.exports = function spread(callback) {
 /* 36 */,
 /* 37 */,
 /* 38 */,
-/* 39 */
+/* 39 */,
+/* 40 */,
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(40);
+module.exports = __webpack_require__(42);
 
 
 /***/ }),
-/* 40 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -45550,16 +45552,16 @@ module.exports = __webpack_require__(40);
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(41);
+__webpack_require__(43);
 
-__webpack_require__(50);
+__webpack_require__(52);
 
 $(document).ready(function () {
   $('#content').summernote();
 });
 
 /***/ }),
-/* 41 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -45576,9 +45578,9 @@ try {
   window.$ = window.jQuery = __webpack_require__(3);
 
   __webpack_require__(13);
-  __webpack_require__(42);
-  __webpack_require__(1);
   __webpack_require__(44);
+  __webpack_require__(1);
+  __webpack_require__(46);
 } catch (e) {}
 
 /**
@@ -45623,7 +45625,7 @@ if (token) {
 // });
 
 /***/ }),
-/* 42 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -46249,7 +46251,7 @@ var lists = {
     unique: unique
 };
 
-var isSupportAmd = "function" === 'function' && __webpack_require__(43); // eslint-disable-line
+var isSupportAmd = "function" === 'function' && __webpack_require__(45); // eslint-disable-line
 /**
  * returns whether font is installed or not.
  *
@@ -52944,7 +52946,7 @@ $$1.summernote = $$1.extend($$1.summernote, {
 
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(module, exports) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
@@ -52953,7 +52955,7 @@ module.exports = __webpack_amd_options__;
 /* WEBPACK VAR INJECTION */}.call(exports, {}))
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
@@ -52961,8 +52963,8 @@ module.exports = __webpack_amd_options__;
 
 (function(mod) {
   if (true) // CommonJS
-    mod(__webpack_require__(1), __webpack_require__(45),
-        __webpack_require__(49));
+    mod(__webpack_require__(1), __webpack_require__(47),
+        __webpack_require__(51));
   else if (typeof define == "function" && define.amd) // AMD
     define(["../../lib/codemirror", "../htmlmixed/htmlmixed",
             "../../addon/mode/multiplex"], mod);
@@ -52996,7 +52998,7 @@ module.exports = __webpack_amd_options__;
 
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
@@ -53004,7 +53006,7 @@ module.exports = __webpack_amd_options__;
 
 (function(mod) {
   if (true) // CommonJS
-    mod(__webpack_require__(1), __webpack_require__(46), __webpack_require__(47), __webpack_require__(48));
+    mod(__webpack_require__(1), __webpack_require__(48), __webpack_require__(49), __webpack_require__(50));
   else if (typeof define == "function" && define.amd) // AMD
     define(["../../lib/codemirror", "../xml/xml", "../javascript/javascript", "../css/css"], mod);
   else // Plain browser env
@@ -53154,7 +53156,7 @@ module.exports = __webpack_amd_options__;
 
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
@@ -53561,7 +53563,7 @@ if (!CodeMirror.mimeModes.hasOwnProperty("text/html"))
 
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
@@ -54463,7 +54465,7 @@ CodeMirror.defineMIME("application/typescript", { name: "javascript", typescript
 
 
 /***/ }),
-/* 48 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
@@ -55301,7 +55303,7 @@ CodeMirror.defineMode("css", function(config, parserConfig) {
 
 
 /***/ }),
-/* 49 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
@@ -55438,7 +55440,7 @@ CodeMirror.multiplexingMode = function(outer /*, others */) {
 
 
 /***/ }),
-/* 50 */
+/* 52 */
 /***/ (function(module, exports) {
 
 /*!

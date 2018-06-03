@@ -6,13 +6,15 @@
         <div class="card-header">
            {{ __('Creat New Article') }}
         </div>
-        <div class="card-body">
+        <div class="card-body px-4">
             <form action="{{ route('post.store') }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="title">Title</label>
                     <input type="text" name="title" class="form-control" value={{old('title')}}>
                 </div>
+                <div class="row">
+                <div class="col-md-6">    
                 <div class="form-group">
                     <label for="category_id">Select a Category</label>
                     <select name="category_id" id="category_id" class="form-control">
@@ -24,6 +26,8 @@
                         @endforeach
                     </select>
                 </div>
+                </div>
+                <div class="col-md-6">   
                 <div class="form-group">
                     <label for="tags">Select a Tag</label>
                     <select name="tags" id="tags" class="form-control">
@@ -35,6 +39,8 @@
                         @endforeach
                     </select>
                 </div>
+                </div>
+                </div>
                 <div class="form-group">
                     <label for="summary">Summary</label>
                     <input type="text" name="summary" class="form-control" value={{old('summary')}}>
@@ -45,29 +51,31 @@
                 <input type="file" name="cover_image" class="form-control-file" id="cover_image" value={{old('cover_image')}}></input>
               </div>
 
-                <div class="form-group">
+                <div class="form-group pb-2">
                     <label for="content">Content</label>
                     <textarea name="content" id="content" rows="10" class="form-control" value={{old('content')}}></textarea>
                 </div>
-                <div><h5>Publish or Save as Draft?</h5>            	
+                <div class="row">
+                <div class="col-md-5">    
+                <div><h6>Publish or Save as Draft?</h6>            	
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="status" id="status0" value="draft">
-                    <label class="form-check-label" for="status">
-                        Save as Draft
-                    </label>
+                    <label class="form-check-label" for="status">Save as Draft</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="status" id="status1" value="published">
-                    <label class="form-check-label" for="status">
-                        Publish Article
-                    </label>
+                    <label class="form-check-label" for="status">Publish Article</label>
                 </div>
-                <div class="form-group pt-4">
-                    <div class="text-center">
-                        <button class="btn btn-lg btn-success" type="submit">Store Post</button>
+                </div>
+                 <div class="col-md-7">
+                <div class="form-group pt-2">
+                    <div>
+                        <button class="btn btn-lg btn-primary" type="submit">Store Post</button>
                     </div>
                 </div>
+            </div>
+            </div>
             </form>
         </div>
     </div>
