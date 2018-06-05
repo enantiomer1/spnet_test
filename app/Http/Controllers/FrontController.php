@@ -28,6 +28,7 @@ class FrontController extends Controller
         
         return view('front.home', compact('posts'));
     }
+    
     /**
      * Show the application dashboard.
      *

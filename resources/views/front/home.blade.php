@@ -5,10 +5,11 @@
     <div class="section">
         <div class="container">
         <div class="row justify-content-center">
-        <h2 class="title pb-4">{{ __('Latest Articles') }}</h2>
+        <h2 class="title pb-2">{{ __('Latest Articles') }}</h2>
         <div class="col-md-12">
-            <div class="card mt-2">
-                <div class="card-header">{{ __('From the Blog') }}</div>
+        <div class="separator separator-primary"></div>
+            <div class="card mt-4">
+                <!-- <div class="card-header">{{ __('From the Blog') }}</div> -->
 
                 <div class="card-body">
                 @if($posts->count() > 0)
