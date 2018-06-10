@@ -14,21 +14,44 @@ class FrontController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth')->except('home');
+        $this->middleware('auth')->only('dashboard');
     }
 
     /**
-     * Show the application dashboard.
+     * Show the application home page.
      *
      * @return \Illuminate\Http\Response
      */
     public function home()
     {
-        $posts = Post::orderBy('created_at','desc')->paginate(10);
+        $posts = Post::take(5)->orderBy('created_at','desc')->get();
         
         return view('front.home', compact('posts'));
     }
     
+    /**
+     * Show the application blog page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function blog()
+    {
+        $posts = Post::orderBy('created_at','desc')->paginate(10);
+        
+        return view('front.blog.index', compact('posts'));
+    }
+
+    /**
+     * Show the application blog page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function article($slug)
+    {
+        $post = Post::where('slug', $slug)->first();
+
+        return view('front.blog.article', compact('post'));
+    }
     /**
      * Show the application dashboard.
      *

@@ -8,9 +8,10 @@
     @include('front.partials.page-header')    
         <div class="main">
             @include('partials.errors') 
-            @yield('content') 
+            @yield('content')           
         </div>
+      @include('front.partials.footer')
     </div>
-     @include('front.partials.footer')
+      
 </body>
 </html>

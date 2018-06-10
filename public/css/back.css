@@ -12312,13 +12312,7 @@ fieldset[disabled] .form-control {
 
 textarea.form-control {
   max-width: 100%;
-  max-height: 80px;
-  padding: 10px 10px 0 0;
-  resize: none;
-  border: none;
-  border-bottom: 1px solid #bfc2c5;
-  border-radius: 0;
-  line-height: 2;
+  max-height: 45px;
 }
 
 textarea.form-control:focus,
@@ -12966,7 +12960,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
 
 .navbar .navbar-nav .nav-link {
   text-transform: uppercase;
-  font-size: 0.7142em;
+  font-size: 0.9em;
   padding: 0.5rem 0.7rem;
   line-height: 1.625rem;
   margin-right: 3px;
@@ -12979,16 +12973,9 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
 
 .navbar .navbar-nav .nav-link i.fa,
 .navbar .navbar-nav .nav-link i.now-ui-icons {
-  font-size: 18px;
-  position: relative;
-  top: 3px;
-  text-align: center;
-  width: 21px;
-}
-
-.navbar .navbar-nav .nav-link i.now-ui-icons {
-  top: 4px;
   font-size: 16px;
+  position: relative;
+  text-align: center;
 }
 
 .navbar .navbar-nav .nav-link.profile-photo .profile-photo-small {
@@ -13021,7 +13008,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
 
 .navbar .navbar-brand {
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 0.9em;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   line-height: 1.625rem;
@@ -14393,7 +14380,7 @@ img {
   position: relative;
   text-transform: uppercase;
   cursor: pointer;
-  font-size: 1em;
+  font-size: .9em;
   padding: 10px 8px;
   line-height: 1.625rem;
 }

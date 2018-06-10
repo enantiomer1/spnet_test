@@ -1,30 +1,30 @@
-<div class="sidebar" data-color="orange">
+  <div class="sidebar" data-color="orange">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
   <div class="logo">
-    <a href="http://www.creative-tim.com" class="simple-text logo-normal text-center">
-      SponsorNet
+    <a href="{{ url('/') }}" class="simple-text logo-normal text-center">
+      {{ config('app.name', 'Laravel') }}
     </a>
   </div>
   <div class="sidebar-wrapper">
     <ul class="nav">
       <li>
-        <a href="/dashboard">
+        <a href="{{ route('admin') }}">
           <i class="fas fa-tachometer-alt"></i>
-          <p>Dashboard</p>
+          <p>Admin Home</p>
         </a>
       </li>
       <li>
-        <a href="/create-post">
+        <a href="{{ route('post.index') }}">
           <i class="fas fa-tachometer-alt"></i>
-          <p>Icons</p>
+          <p>Post List & Admin</p>
         </a>
       </li>
       <li>
-        <a href="./map.html">
+        <a href="{{ route('post.create') }}">
           <i class="fas fa-tachometer-alt"></i>
-          <p>Maps</p>
+          <p>Create New Post</p>
         </a>
       </li>
       <li>

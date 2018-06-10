@@ -7,16 +7,21 @@
            {{ __('Creat New Article') }}
         </div>
         <div class="card-body px-4">
-            <form action="{{ route('post.store') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('post.update', ['id' => $post->id ]) }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="title">{{ __('Title') }}</label>
-                    <input type="text" name="title" class="form-control" value={{old('title')}}>
+                   <textarea name="title" id="title" rows="5" class="form-control" value={{old('title')}}> {{ $post->title}}</textarea>
                 </div>
                 <div class="row">
-                <div class="col-md-6">    
+                <div class="col-md-6">
+                    <h6>Current Category:</h6>
+                    @foreach($current_cat as $cat)
+                        <p>{{ $cat->name}}</p>
+                    @endforeach
+                
                 <div class="form-group">
-                    <label for="category_id">{{ __('Select a Category') }}</label>
+                    <label for="category_id">Select a Category</label>
                     <select name="category_id" id="category_id" class="form-control">
                         <option disabled selected value> -- select an option --</option>
                         @foreach($categories as $category)
@@ -29,7 +34,7 @@
                 </div>
                 <div class="col-md-6">   
                 <div class="form-group">
-                    <label for="tags">{{ __('Select a Tag') }}</label>
+                    <label for="tags">Select a Tag</label>
                     <select name="tags" id="tags" class="form-control">
                         <option disabled selected value> -- select an option --</option>
                         @foreach($tags as $tag)
@@ -42,22 +47,22 @@
                 </div>
                 </div>
                 <div class="form-group">
-                    <label for="summary">{{ __('Summary') }}</label>
-                    <input type="text" name="summary" class="form-control" value={{old('summary')}}>
+                    <label for="summary">Summary</label>
+                     <textarea name="summary" id="summary" rows="5" class="form-control" value={{old('summary')}}> {{ $post->summary}}</textarea>
                 </div>
 
               <div class="form-group">
-                <label for="cover_image">{{ __('Select Image File for Featured Image') }}</label>
-                <input type="file" name="cover_image" class="form-control-file" id="cover_image" value={{old('cover_image')}}></input>
+                <label for="cover_image">Select Image File for Featured Image</label>
+                <input type="file" name="cover_image" class="form-control-file" id="cover_image" value={{old('cover_image')}}> {{ $post->cover_image}}</input>
               </div>
 
                 <div class="form-group pb-2">
-                    <label for="content">{{ __('Content') }}</label>
-                    <textarea name="content" id="content" rows="10" class="form-control" value={{old('content')}}></textarea>
+                    <label for="content">Content</label>
+                    <textarea name="content" id="content" rows="10" class="form-control" value={{old('content')}}> {{ $post->content}}</textarea>
                 </div>
                 <div class="row">
                 <div class="col-md-5">    
-                <div><h6>{{ __('Publish or Save as Draft?') }}</h6>            	
+                <div><h6>Publish or Save as Draft?</h6>            	
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="status" id="status0" value="draft">
@@ -71,7 +76,7 @@
                  <div class="col-md-7">
                 <div class="form-group pt-2">
                     <div>
-                        <button class="btn btn-lg btn-primary" type="submit">{{ __('Store Post') }}</button>
+                        <button class="btn btn-lg btn-primary" type="submit">Update Post</button>
                     </div>
                 </div>
             </div>

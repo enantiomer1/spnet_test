@@ -35,26 +35,7 @@ class AdminController extends Controller
     $roles = Role::all();
     $posts = Post::all();
       
-      return view('back.admin', compact('users', 'roles', 'posts'));
-    }
-
-  /**
-   * Show the form for creating a new resource.
-   *
-   * @return Response
-   */
-  public function postcreate()
-  {
-    $categories = Category::all();
-    $tags = Tag::all();
-    $user = Auth::user();
-    $post = new Post();
-
-    if($categories->count() == 0 || $tags->count() == 0) {
-        return redirect()->back()->withFlashInfo('You must have some categories and tags before attempting to create a post.'); 
-    }
-    
-    return view('back.posts.create', compact('categories', 'tags', 'post'));
+    return view('back.admin', compact('users', 'roles', 'posts'));
   }
 
   /**
@@ -62,47 +43,9 @@ class AdminController extends Controller
    *
    * @return Response
    */
-  public function poststore(Request $request)
+  public function store(Request $request)
   {
-    $this->validate($request, [
-      'title' => 'required|max:255',
-      'summary' => 'required',
-      'content' => 'required',
-      'category_id' => 'required',
-      'tags' => 'required',
-      'status' => 'required',
-      'cover_image' => 'image|nullable|max:1999'
-  ]);
-
-    // Handle File Upload
-    if($request->hasFile('cover_image')){
-        // Get filename with the extension
-        $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
-        // Get just filename
-        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-        // Get just ext
-        $extension = $request->file('cover_image')->getClientOriginalExtension();
-        // Filename to store
-        $fileNameToStore= $filename.'_'.time().'.'.$extension;
-        // Upload Image
-        $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
-    } else {
-        $fileNameToStore = 'noimage.jpg';
-    }
-
-    $post = Post::create([
-      'title' => $request->title,
-      'summary' => $request->summary,
-      'content' => $request->content,
-      'user_id' => auth()->id(),
-      'status' => $request->status,
-      'cover_image' => $fileNameToStore
-      ]);
-
-    $post->tags()->attach($request->tags);
-    $post->categories()->attach($request->category_id);
-
-    return redirect()->back()->withFlashSuccess('Article successfully created.'); 
+    
   }
 
   /**
