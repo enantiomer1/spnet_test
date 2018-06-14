@@ -7,7 +7,7 @@
         <div class="row justify-content-center">
        
         <div class="col-md-12">
-        <h2 class="title pb-2">{{ __('Latest Articles') }}</h2>
+        <h2 class="title pb-2 text-center">{{ __('Latest Articles') }}</h2>
         <div class="separator separator-primary"></div>
             <div class="card mt-4">
                 <div class="card-body">

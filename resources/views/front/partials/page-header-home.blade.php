@@ -3,8 +3,8 @@
     </div>
     <div class="container">
         <div class="content-center brand">
-            <img class="n-logo" src="./img/now-logo2.png" alt="">
-            <h1 class="h1-seo">Love beautiful code? We do too.</h1>
+            <h1 class="h1-large">Laravel</h1>
+            <h1>Love beautiful code? We do too.</h1>
             <h3>The PHP Framework For Web Artisans</h3>
         </div>
     </div>

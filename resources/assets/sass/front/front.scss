@@ -37,3 +37,12 @@ img.filter:hover {
     -webkit-filter: grayscale(75%); /* Safari 6.0 - 9.0 */
     filter: grayscale(75%);
 }
+
+h1.h1-large {
+	font-size: 5em;
+	margin-bottom: 0.3rem
+}
+
+.badge.badge-primary:hover {
+	background-color: #f96332;
+}

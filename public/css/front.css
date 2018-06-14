@@ -16110,7 +16110,7 @@ textarea.form-control:active {
 
 .badge {
   border-radius: 8px;
-  padding: 4px 8px;
+  padding: 6px 8px 4px 8px;
   text-transform: uppercase;
   font-size: 0.7142em;
   line-height: 12px;
@@ -17812,10 +17812,6 @@ img {
   content: " ";
 }
 
-.page-header {
-  height: 100vh;
-}
-
 .section-full-page:after,
 .section-full-page:before {
   display: block;
@@ -18040,7 +18036,7 @@ img {
 }
 
 .page-header {
-  height: 100vh;
+  height: 75vh;
   max-height: 75%;
   padding: 0;
   color: #FFFFFF;
@@ -20078,5 +20074,14 @@ img.filter:hover {
   -webkit-filter: grayscale(75%);
   /* Safari 6.0 - 9.0 */
   filter: grayscale(75%);
+}
+
+h1.h1-large {
+  font-size: 5em;
+  margin-bottom: 0.3rem;
+}
+
+.badge.badge-primary:hover {
+  background-color: #f96332;
 }
 

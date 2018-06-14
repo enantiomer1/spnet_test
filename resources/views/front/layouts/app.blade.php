@@ -10,7 +10,6 @@
             @include('partials.errors') 
             @yield('content')           
         </div>
-      @include('front.partials.footer')
     </div>
       
 </body>
