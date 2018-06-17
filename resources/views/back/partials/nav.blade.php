@@ -8,7 +8,7 @@
         <span class="navbar-toggler-bar bar3"></span>
       </button>
     </div>
-    <a class="navbar-brand" href="#pablo">Dashboard</a>
+    <a class="navbar-brand" href="#pablo">Admin Home</a>
   </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -19,7 +19,7 @@
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" href="#pablo">
-          <i class="now-ui-icons media-2_sound-wave"></i>
+          <i class="fa fa-bar-chart" aria-hidden="true"></i>
           <p>
             <span class="d-lg-none d-md-block">Stats</span>
           </p>

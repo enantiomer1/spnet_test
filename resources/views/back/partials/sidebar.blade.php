@@ -11,7 +11,7 @@
     <ul class="nav">
       <li>
         <a href="{{ route('admin') }}">
-          <i class="fas fa-tachometer-alt"></i>
+          <i class="fa fa-home" aria-hidden="true"></i>
           <p>Admin Home</p>
         </a>
       </li>
