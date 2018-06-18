@@ -10,19 +10,20 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Cviebrock\EloquentSluggable\Sluggable;
 
-class Post extends Model 
+class Post extends Model
 {
 
     use SoftDeletes;
     use Sluggable;
 
     protected $table = 'posts';
-    
+
     public $timestamps = true;
 
     protected $fillable = [
         'title', 'slug', 'summary', 'content', 'user_id', 'status', 'cover_image',
     ];
+
     /**
      * Return the sluggable configuration array for this model.
      *
@@ -37,7 +38,7 @@ class Post extends Model
         ];
     }
 
-   /**
+    /**
      * One to Many relation
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

@@ -29,7 +29,7 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        {{ $post->title }}
+                                        {{ str_limit($post->title, 50, null) }}
                                     </td>
                                     <td>
                                         {{ $post->created_at }}
@@ -47,6 +47,8 @@
                             </tbody>
                         </table>
                     </div>
+                    <br/>
+                    {{ $posts->links() }}
                 </div>
             </div>
         </div>

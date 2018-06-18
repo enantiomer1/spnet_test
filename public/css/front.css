@@ -16176,7 +16176,7 @@ textarea.form-control:active {
   line-height: 30px;
   color: #2c2c2c;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   background: transparent;
 }
@@ -16184,7 +16184,7 @@ textarea.form-control:active {
 .pagination .page-item .page-link:hover,
 .pagination .page-item .page-link:focus {
   color: #2c2c2c;
-  background-color: rgba(222, 222, 222, 0.3);
+  background-color: rgba(222, 222, 222, 0.4);
   border: none;
 }
 
@@ -16210,8 +16210,8 @@ textarea.form-control:active {
 .pagination .page-item.active > .page-link,
 .pagination .page-item.active > .page-link:focus,
 .pagination .page-item.active > .page-link:hover {
-  background-color: #888;
-  border-color: #888;
+  background-color: #fd7e14;
+  border-color: #fd7e14;
   color: #FFFFFF;
 }
 

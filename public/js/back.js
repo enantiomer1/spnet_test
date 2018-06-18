@@ -45560,6 +45560,11 @@ $(document).ready(function () {
   $('#content').summernote();
 });
 
+$('#flash_modal').modal('toggle');
+setTimeout(function () {
+  $("#flash_modal").modal('hide');
+}, 2000);
+
 /***/ }),
 /* 43 */
 /***/ (function(module, exports, __webpack_require__) {

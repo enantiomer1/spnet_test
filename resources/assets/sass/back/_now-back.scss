@@ -4073,6 +4073,21 @@ img {
   color: #18ce0f;
 }
 
+.sidebar[data-color="grey"]:after,
+.off-canvas-sidebar[data-color="grey"]:after {
+  background: #555;
+}
+
+.sidebar[data-color="grey"] .nav li.active>a,
+.off-canvas-sidebar[data-color="grey"] .nav li.active>a {
+  color: #555;
+}
+
+.sidebar[data-color="grey"] .nav li.active>a i,
+.off-canvas-sidebar[data-color="grey"] .nav li.active>a i {
+  color: #555;
+}
+
 .sidebar[data-color="orange"]:after,
 .off-canvas-sidebar[data-color="orange"]:after {
   background: #f96332;

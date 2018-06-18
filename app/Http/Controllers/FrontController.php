@@ -24,11 +24,14 @@ class FrontController extends Controller
      */
     public function home()
     {
-        $posts = Post::take(5)->orderBy('created_at','desc')->get();
         
-        return view('front.home', compact('posts'));
+        $title = ('Home | SponsorNet');
+
+        $posts = Post::take(5)->orderBy('created_at', 'desc')->get();
+
+        return view('front.home', compact('posts', 'title'));
     }
-    
+
     /**
      * Show the application blog page.
      *
@@ -36,9 +39,11 @@ class FrontController extends Controller
      */
     public function blog()
     {
-        $posts = Post::orderBy('created_at','desc')->paginate(10);
-        
-        return view('front.blog.index', compact('posts'));
+        $title = ('Blog | SponsorNet');
+
+        $posts = Post::orderBy('created_at', 'desc')->paginate(10);
+
+        return view('front.blog.index', compact('posts', 'title'));
     }
 
     /**
@@ -50,8 +55,11 @@ class FrontController extends Controller
     {
         $post = Post::where('slug', $slug)->first();
 
-        return view('front.blog.article', compact('post'));
+        $title = $post->title;
+
+        return view('front.blog.article', compact('post', 'title'));
     }
+
     /**
      * Show the application dashboard.
      *
@@ -59,6 +67,8 @@ class FrontController extends Controller
      */
     public function dashboard()
     {
-        return view('front.dashboard');
+        $title = ('Dashboard | SponsorNet');
+
+        return view('front.dashboard', compact('title'));
     }
 }

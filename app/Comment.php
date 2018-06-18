@@ -6,7 +6,7 @@ use App\User;
 use App\Post;
 use Illuminate\Database\Eloquent\Model;
 
-class Comment extends Model 
+class Comment extends Model
 {
 
     protected $table = 'comments';
@@ -16,7 +16,7 @@ class Comment extends Model
         'body', 'post_id', 'user_id', 'parent_id'
     ];
 
-     public function user()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }

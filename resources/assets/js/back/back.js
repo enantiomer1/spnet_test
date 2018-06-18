@@ -12,3 +12,8 @@ require('./now-back');
 $(document).ready(function() {
   $('#content').summernote();
 });
+
+$('#flash_modal').modal('toggle');
+setTimeout(function() {     
+        $("#flash_modal").modal('hide'); 
+    },2000);

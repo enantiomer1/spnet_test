@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Http\Controllers;
 
@@ -10,10 +10,10 @@ use App\Category;
 use Illuminate\Http\Request;
 use jeremykenedy\LaravelRoles\Models\Role;
 
-class AdminController extends Controller 
+class AdminController extends Controller
 {
 
-  /**
+    /**
      * Create a new controller instance.
      *
      * @return void
@@ -23,73 +23,73 @@ class AdminController extends Controller
         $this->middleware(['auth', 'role:admin']);
     }
 
-  /**
-   * Display a listing of the resource.
-   *
-   * @return Response
-   */
-  public function admin()
-  {
-    $user = Auth::user();
-    $users = User::all();
-    $roles = Role::all();
-    $posts = Post::all();
-      
-    return view('back.admin', compact('users', 'roles', 'posts'));
-  }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function admin()
+    {
+        $user = Auth::user();
+        $users = User::all();
+        $roles = Role::all();
+        $posts = Post::take(10)->orderBy('created_at', 'desc')->get();
 
-  /**
-   * Store a newly created resource in storage.
-   *
-   * @return Response
-   */
-  public function store(Request $request)
-  {
-    
-  }
+        return view('back.admin', compact('users', 'roles', 'posts'));
+    }
 
-  /**
-   * Display the specified resource.
-   *
-   * @param  int  $id
-   * @return Response
-   */
-  public function show($id)
-  {
-    
-  }
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
+    public function store(Request $request)
+    {
 
-  /**
-   * Show the form for editing the specified resource.
-   *
-   * @param  int  $id
-   * @return Response
-   */
-  public function edit($id)
-  {
-    
-  }
+    }
 
-  /**
-   * Update the specified resource in storage.
-   *
-   * @param  int  $id
-   * @return Response
-   */
-  public function update($id)
-  {
-    
-  }
+    /**
+     * Display the specified resource.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function show($id)
+    {
 
-  /**
-   * Remove the specified resource from storage.
-   *
-   * @param  int  $id
-   * @return Response
-   */
-  public function destroy($id)
-  {
-    
-  }
-  
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function edit($id)
+    {
+
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function update($id)
+    {
+
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function destroy($id)
+    {
+
+    }
+
 }

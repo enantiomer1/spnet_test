@@ -17640,6 +17640,21 @@ img {
   color: #18ce0f;
 }
 
+.sidebar[data-color="grey"]:after,
+.off-canvas-sidebar[data-color="grey"]:after {
+  background: #555;
+}
+
+.sidebar[data-color="grey"] .nav li.active > a,
+.off-canvas-sidebar[data-color="grey"] .nav li.active > a {
+  color: #555;
+}
+
+.sidebar[data-color="grey"] .nav li.active > a i,
+.off-canvas-sidebar[data-color="grey"] .nav li.active > a i {
+  color: #555;
+}
+
 .sidebar[data-color="orange"]:after,
 .off-canvas-sidebar[data-color="orange"]:after {
   background: #f96332;
@@ -20313,5 +20328,19 @@ span.CodeMirror-selectedtext {
 
 .navbar-dark .navbar-nav .nav-link {
   color: #fff;
+}
+
+.chart-area ul {
+  list-style-type: none;
+}
+
+.page-item.active .page-link {
+  background-color: #2a5788;
+  border-color: #2a5788;
+}
+
+.cat-tag {
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 
