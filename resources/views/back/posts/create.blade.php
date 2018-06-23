@@ -4,7 +4,7 @@
 <div class="content">
     <div class="card">
         <div class="card-header">
-           {{ __('Creat New Article') }}
+           {{ __('Create New Article') }}
         </div>
         <div class="card-body px-4">
             <form action="{{ route('post.store') }}" method="post" enctype="multipart/form-data">

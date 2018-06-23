@@ -28,21 +28,21 @@
         </a>
       </li>
       <li>
-        <a href="./notifications.html">
+        <a href="{{ route('tape.index') }}">
           <i class="fa fa-tachometer"></i>
-          <p>Notifications</p>
+          <p>Speaker Tapes</p>
         </a>
       </li>
       <li>
-        <a href="./user.html">
-          <i class="fa fa-tachometer"></i>
-          <p>User Profile</p>
+        <a href="{{ route('tape.create') }}">
+          <i class="fa fa-headphones"></i>
+          <p>Add new Speaker Tape</p>
         </a>
       </li>
       <li>
         <a href="./tables.html">
           <i class="fa fa-tachometer"></i>
-          <p>Table List</p>
+          <p>User Admin</p>
         </a>
       </li>
     </ul>

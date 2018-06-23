@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-use Illuminate\Http\Request;
+use App\Tape;
+use App\Mail\SendContact;
+use Illuminate\Support\Facades\Mail;
+use App\Http\Requests\SendContactRequest;
+
 
 class FrontController extends Controller
 {
@@ -70,5 +74,43 @@ class FrontController extends Controller
         $title = ('Dashboard | SponsorNet');
 
         return view('front.dashboard', compact('title'));
+    }
+
+    /**
+     * Show the application speaker tapes page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function tapes()
+    {
+        $title = ('Speaker Tapes | SponsorNet');
+
+        $tapes = Tape::orderBy('created_at', 'desc')->paginate(10);
+
+        return view('front.tapes.index', compact('tapes', 'title'));
+    }
+
+    /**
+     * Show the application contacts page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function contact()
+    {
+        $title = ('Contact Us | SponsorNet');
+        
+        return view('front.contact', compact('title'));
+    }
+
+    /**
+     * @param SendContactRequest $request
+     *
+     * @return mixed
+     */
+    public function send(SendContactRequest $request)
+    {
+        Mail::send(new SendContact($request));
+
+        return redirect()->back()->withFlashSuccess('Message successfully sent.');
     }
 }

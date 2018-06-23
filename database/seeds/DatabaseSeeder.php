@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             $this->call('TagTableSeeder');
             $this->call('PostTableSeeder');
             $this->call('CommentTableSeeder');
+            $this->call('TapeTableSeeder');
 
         Model::reguard();
     }

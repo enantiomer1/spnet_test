@@ -42,15 +42,15 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" rel="tooltip" title="Contact Us" data-placement="bottom" href="#" target="_blank">
-                        <i class="fa fa-share-square" aria-hidden="true"></i>
-                        <p>{{ __('Contact') }}</p>
+                    <a class="nav-link" rel="tooltip" title="Speaker Tapes" data-placement="bottom" href="{{ route('speaker.tapes') }}">
+                        <i class="fa fa-headphones" aria-hidden="true"></i>
+                        <p>{{ __('Speaker Tapes') }}</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" rel="tooltip" title="Learn More" data-placement="bottom" href="#" target="_blank">
-                        <i class="fa fa-bookmark" aria-hidden="true"></i>
-                        <p>{{ __('Documentation') }}</p>
+                    <a class="nav-link" rel="tooltip" title="Contact Us" data-placement="bottom" href="{{ route('contact') }}">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <p>{{ __('Contact') }}</p>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -73,15 +73,15 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" rel="tooltip" title="Contact Us" data-placement="bottom" href="#" target="_blank">
-                        <i class="fa fa-share-square" aria-hidden="true"></i>
-                        <p>{{ __('Contact') }}</p>
+                    <a class="nav-link" rel="tooltip" title="Speaker Tapes" data-placement="bottom" href="{{ route('speaker.tapes') }}">
+                        <i class="fa fa-headphones" aria-hidden="true"></i>
+                        <p>{{ __('Speaker Tapes') }}</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" rel="tooltip" title="Learn More" data-placement="bottom" href="#" target="_blank">
-                        <i class="fa fa-bookmark" aria-hidden="true"></i>
-                        <p>{{ __('Documentation') }}</p>
+                    <a class="nav-link" rel="tooltip" title="Contact Us" data-placement="bottom" href="#">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <p>{{ __('Contact') }}</p>
                     </a>
                 </li>
                 <li class="nav-item dropdown">

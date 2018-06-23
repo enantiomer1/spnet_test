@@ -22,7 +22,7 @@
             <div class="chart-area">
               <ol>
               @foreach($posts as $post)
-                <li>{{ str_limit($post->title, 40, null) }}</li>
+                <li>{{ str_limit($post->title, 50, null) }}</li>
               @endforeach
                 </ol>
             </div>

@@ -35,10 +35,6 @@ class SendContact extends Mailable
     public function build()
     {
         return $this->to(('jmunn990211@gmail.com'), config('mail.from.name'))
-            ->view('front.mail.contact')
-            ->text('frontend.mail.contact-text')
-            ->subject(__('strings.emails.contact.subject', ['app_name' => app_name()]))
-            ->from($this->request->email, $this->request->name)
-            ->replyTo($this->request->email, $this->request->name);
+            ->view('front.mail.contact');
     }
 }
