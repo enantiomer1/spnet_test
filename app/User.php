@@ -22,7 +22,14 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'username', 'email', 'password',
+        'username',
+        'email',
+        'password',
+        'sobriety_date',
+        'program',
+        'bio',
+        'zipcode',
+        'zipdata_id',
     ];
 
     /**
@@ -52,6 +59,11 @@ class User extends Authenticatable
     public function comments()
     {
         return $this->hasMany(Comment::class);
+    }
+
+    public function zipdatas()
+    {
+        return $this->belongsToMany('App\Zipdata');
     }
 
 }

@@ -12,5 +12,5 @@ class Tape extends Model
 
     protected $fillable = [
         'speaker', 'title', 'description', 'file_name',
-        ];
+    ];
 }

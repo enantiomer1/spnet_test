@@ -45,6 +45,6 @@ class LoginController extends Controller
         $title = ('Login | SponsorNet');
 
         return view('auth.login', compact('title'));
-            
+
     }
 }

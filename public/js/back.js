@@ -45563,7 +45563,7 @@ $(document).ready(function () {
 $('#flash_modal').modal('toggle');
 setTimeout(function () {
   $("#flash_modal").modal('hide');
-}, 2000);
+}, 3000);
 
 /***/ }),
 /* 43 */

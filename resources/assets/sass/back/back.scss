@@ -1,34 +1,28 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Roboto:300");
-
 // Variables
 @import "variables";
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-
 @import "font-awesome";
-
 @import "now-back";
-
 @import '~summernote/dist/summernote-bs4';
-
 @import '~codemirror/lib/codemirror';
 
 .navbar-dark .navbar-nav .nav-link {
-    color: #fff;
+  color: #fff;
 }
 
 .chart-area ul {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 .page-item.active .page-link {
-	background-color: #2a5788;
-    border-color: #2a5788;
+  background-color: #2a5788;
+  border-color: #2a5788;
 }
 
 .cat-tag {
-	margin-top: 5px;
-	margin-bottom: 0;
+  margin-top: 5px;
+  margin-bottom: 0;
 }

@@ -15,7 +15,7 @@
                     &copy;
                     <script>
                         document.write(new Date().getFullYear())
-                    </script> {{ __('Designed by Enantiomer1 ') }} 
+                    </script> {{ __('Designed by Enantiomer1 ') }}
                 </div>
             </ul>
         </nav>

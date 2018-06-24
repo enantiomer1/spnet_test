@@ -35854,7 +35854,7 @@ __webpack_require__(38);
 $('#flash_modal').modal('toggle');
 setTimeout(function () {
   $("#flash_modal").modal('hide');
-}, 2000);
+}, 3000);
 
 /***/ }),
 /* 36 */

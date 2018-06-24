@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -9,11 +8,11 @@ require('./bootstrap');
 
 require('./now-back');
 
-$(document).ready(function() {
-  $('#content').summernote();
+$(document).ready(function () {
+    $('#content').summernote();
 });
 
 $('#flash_modal').modal('toggle');
-setTimeout(function() {     
-        $("#flash_modal").modal('hide'); 
-    },2000);
+setTimeout(function () {
+    $("#flash_modal").modal('hide');
+}, 3000);

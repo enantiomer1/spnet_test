@@ -1,4 +1,3 @@
-
 window._ = require('lodash');
 window.Popper = require('popper.js').default;
 
@@ -15,7 +14,8 @@ try {
     require('summernote');
     require('codemirror');
     require('codemirror/mode/htmlembedded/htmlembedded');
-} catch (e) {}
+} catch (e) {
+}
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

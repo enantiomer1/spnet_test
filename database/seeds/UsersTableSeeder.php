@@ -32,6 +32,10 @@ class UsersTableSeeder extends Seeder
 	            'email' => 'admin@admin.com',
 	            'password' => bcrypt('password'),
 	            'confirmed' => 1,
+	            'program' => 'AA',
+            	'sobriety_date' => '2000-4-25',
+            	'zipcode' => '70818',
+            	'bio' => 'Big Book oriented, love the steps, email me.',
 	        ]);
 
 	        $newUser->attachRole($adminRole);
@@ -48,6 +52,10 @@ class UsersTableSeeder extends Seeder
 	            'email' => 'user@user.com',
 	            'password' => bcrypt('password'),
 	            'confirmed' => 1,
+	            'program' => 'NA',
+            	'sobriety_date' => '2005-9-12',
+            	'zipcode' => '70815',
+            	'bio' => 'Enjoy working with newcomers and the steps, send me an email.',
 	        ]);
 
 	        $newUser;

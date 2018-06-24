@@ -20,6 +20,8 @@ Route::post('contact-send', 'FrontController@send')->name('contact.send');
 */
 Auth::routes();
 Route::get('/dashboard', 'FrontController@dashboard')->name('dashboard');
+Route::get('/sponsor-search', 'ZipController@sponsor_search')->name('sponsor-search');
+Route::post('/sponsor-search/search', 'ZipController@search')->name('sponsor-search.search');
 
 /*
 |--------------------------------------------------------------------------
@@ -33,22 +35,21 @@ Route::get('/admin', 'AdminController@admin')->name('admin');
 | Admin - Protected by admin middleware in PostController
 |--------------------------------------------------------------------------
 */
-
 /* Posts */
 Route::prefix('admin')->group(function () {
     Route::get('/post/create-post', 'PostController@create')->name('post.create');
-	Route::post('/post/post.store', 'PostController@store')->name('post.store');
-	Route::get('/post/post-index', 'PostController@index')->name('post.index');
-	Route::get('/post/edit/{id}', 'PostController@edit')->name('post.edit');
-	Route::post('/post/update/{id}', 'PostController@update')->name('post.update');
-	Route::get('/post/delete/{id}', 'PostController@destroy')->name('post.delete');
-/* Tapes */
-	Route::get('/tape/create-tape', 'TapeController@create')->name('tape.create');
-	Route::post('/tape/tape.store', 'TapeController@store')->name('tape.store');
-	Route::get('/tape/tape-index', 'TapeController@index')->name('tape.index');
-	Route::get('/tape/edit/{id}', 'TapeController@edit')->name('tape.edit');
-	Route::post('/tape/update/{id}', 'TapeController@update')->name('tape.update');
-	Route::get('/tape/delete/{id}', 'TapeController@destroy')->name('tape.delete');
+    Route::post('/post/post.store', 'PostController@store')->name('post.store');
+    Route::get('/post/post-index', 'PostController@index')->name('post.index');
+    Route::get('/post/edit/{id}', 'PostController@edit')->name('post.edit');
+    Route::post('/post/update/{id}', 'PostController@update')->name('post.update');
+    Route::get('/post/delete/{id}', 'PostController@destroy')->name('post.delete');
+    /* Tapes */
+    Route::get('/tape/create-tape', 'TapeController@create')->name('tape.create');
+    Route::post('/tape/tape.store', 'TapeController@store')->name('tape.store');
+    Route::get('/tape/tape-index', 'TapeController@index')->name('tape.index');
+    Route::get('/tape/edit/{id}', 'TapeController@edit')->name('tape.edit');
+    Route::post('/tape/update/{id}', 'TapeController@update')->name('tape.update');
+    Route::get('/tape/delete/{id}', 'TapeController@destroy')->name('tape.delete');
 });
 
 

@@ -18,6 +18,10 @@ class CreateUsersTable extends Migration
             $table->string('username');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('program', 7)->default('');
+            $table->date('sobriety_date')->nullable();
+            $table->string('zipcode', 5)->default('');
+            $table->string('bio', 255)->default('');
             $table->rememberToken();
             $table->timestamps();
         });

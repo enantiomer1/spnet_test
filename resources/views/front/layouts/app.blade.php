@@ -3,14 +3,14 @@
 @include('front.partials.head')
 
 <body class="sidebar-collapse">
-    @include('front.partials.nav') 
-    <div class="wrapper">
-    @include('front.partials.page-header')    
-        <div class="main">
-            @include('partials.errors') 
-            @yield('content')           
-        </div>
+@include('front.partials.nav')
+<div class="wrapper">
+    @include('front.partials.page-header')
+    <div class="main">
+        @include('partials.errors')
+        @yield('content')
     </div>
-      
+</div>
+
 </body>
 </html>

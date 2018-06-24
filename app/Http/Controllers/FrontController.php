@@ -28,7 +28,7 @@ class FrontController extends Controller
      */
     public function home()
     {
-        
+
         $title = ('Home | SponsorNet');
 
         $posts = Post::take(5)->orderBy('created_at', 'desc')->get();
@@ -98,7 +98,7 @@ class FrontController extends Controller
     public function contact()
     {
         $title = ('Contact Us | SponsorNet');
-        
+
         return view('front.contact', compact('title'));
     }
 
