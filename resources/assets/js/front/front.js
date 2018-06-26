@@ -8,8 +8,6 @@ require('./bootstrap');
 
 require('./now-front');
 
-require('./switch');
-
 $('#flash_modal').modal('toggle');
 setTimeout(function () {
     $("#flash_modal").modal('hide');
