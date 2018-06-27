@@ -44446,7 +44446,6 @@ module.exports = function(module) {
   Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
-//# sourceMappingURL=bootstrap.js.map
 
 
 /***/ }),
@@ -52944,7 +52943,6 @@ $$1.summernote = $$1.extend($$1.summernote, {
 });
 
 })));
-//# sourceMappingURL=summernote.js.map
 
 
 /***/ }),
@@ -55459,21 +55457,7 @@ CodeMirror.multiplexingMode = function(outer /*, others */) {
  =========================================================
 
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
  */
-
-(function () {
-    isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
-
-    if (isWindows) {
-        // if we are on windows OS we activate the perfectScrollbar function
-        $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
-
-        $('html').addClass('perfect-scrollbar-on');
-    } else {
-        $('html').addClass('perfect-scrollbar-off');
-    }
-})();
 
 transparent = true;
 transparentDemo = true;

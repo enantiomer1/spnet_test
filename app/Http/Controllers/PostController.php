@@ -67,7 +67,7 @@ class PostController extends Controller
             'category_id' => 'required',
             'tags' => 'required',
             'status' => 'required',
-            'cover_image' => 'image|nullable|max:1999'
+            'cover_image' => 'image|nullable|max:50000'
         ]);
 
         // Handle File Upload
@@ -144,7 +144,7 @@ class PostController extends Controller
             'category_id' => 'required',
             'tags' => 'required',
             'status' => 'required',
-            'cover_image' => 'image|nullable|max:1999'
+            'cover_image' => 'image|nullable|max:50000'
         ]);
 
         $post = Post::find($id);

@@ -53,7 +53,7 @@ class ZipController extends Controller
             ->where('longitude', '<=', $lonE)
             ->where('longitude', '>=', $lonW)
             ->where('city', '!=', '')
-            ->with('users:id,username,email,program,sobriety_date,zipcode,bio,avatar_location')
+            ->with('users:id,username,email,program,sobriety_date,zipcode,bio')
             ->get();
 
         $title = ('Search Results | SponsorNet');

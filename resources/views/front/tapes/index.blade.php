@@ -17,6 +17,7 @@
                                 <tr>
                                     <th scope="col">Speaker</th>
                                     <th scope="col">Title</th>
+                                    <th scope="col">Download/Play</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -24,6 +25,7 @@
                                 <tr>
                                     <td>{{ $tape->speaker }}</td>
                                     <td>{{ $tape->title }}</td>
+                                    <td class="text-center"><a href="/storage/audio_files/{{$tape->file_name}}"><i class="fa fa-download pr-2" aria-hidden="true"></i></a></td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -31,7 +33,7 @@
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            Updated 3 minutes ago
+                            Right click and Save link as to Download
                         </div>
                     </div>
                 </div>
