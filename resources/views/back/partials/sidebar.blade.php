@@ -45,10 +45,17 @@
                 </a>
             </li>
             <li>
-                <a href="./tables.html">
-                    <i class="fa fa-tachometer"></i>
+                <a href="{{ route('user.index') }}">
+                    <i class="fa fa-user"></i>
 
                     <p>User Admin</p>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('user.index') }}">
+                    <i class="fa fa-user"></i>
+
+                    <p>Create New User</p>
                 </a>
             </li>
         </ul>

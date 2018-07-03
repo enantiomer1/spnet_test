@@ -84,10 +84,10 @@ class FrontController extends Controller
     public function tapes()
     {
         $title = ('Speaker Tapes | SponsorNet');
-
         $tapes = Tape::orderBy('created_at', 'desc')->paginate(10);
+        $sandy = Tape::where('speaker', 'like', "%sandy%")->get();
 
-        return view('front.tapes.index', compact('tapes', 'title'));
+        return view('front.tapes.index', compact('tapes', 'title', 'sandy'));
     }
 
     /**

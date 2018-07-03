@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use App\Zipdata;
+use App\User;
 use Illuminate\Http\Request;
+use App\Exceptions\GeneralException;
+use App\Http\Requests\ZipSearchRequest;
 
 class ZipController extends Controller
 {
@@ -29,7 +33,7 @@ class ZipController extends Controller
      *
      * @return Response
      */
-    public function search(SearchRequest $request)
+    public function zip_search(ZipSearchRequest $request)
     {
         $zipcode = $request->zipcode;
         $d = $request->search_radius;

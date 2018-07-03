@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Tape;
 use Illuminate\Http\Request;
 
@@ -37,8 +36,6 @@ class TapeController extends Controller
      */
     public function create()
     {
-
-        $tape = new Tape();
 
         return view('back.tapes.create', compact('tape'));
     }

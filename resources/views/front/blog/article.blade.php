@@ -9,10 +9,10 @@
                     <p class="text-center"><i class="fa fa-rss pr-1" aria-hidden="true"></i>Posted on <i class="fa fa-calendar-check-o px-1" aria-hidden="true"></i>{{ $post->created_at->format('F j, Y') }} | <i class="fa fa-user pr-1" aria-hidden="true"></i>by {{ $post->author }}</p>
                     <div class="separator separator-primary"></div>
                     <div class="card mt-2">
-                        <div class="card-body">
+                        <div class="card-body single">
                             <div class="row pb-2">
                                 <div class="col-md-10">
-                                    <p>{{ $post->summary }}</p>
+                                    <p>{!! $post->content !!}</p>
                                 </div>
                             </div>
                         </div>

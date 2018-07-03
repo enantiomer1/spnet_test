@@ -13,7 +13,7 @@
                                 @foreach($posts as $post)
                                     <div class="row pb-2">
                                         <div class="col-md-4">
-                                            <a href="{{ route('blog.article', ['slug' => $post->slug ]) }}"> <img class="img-fluid img-thumbnail rounded mb-0 filter" src="/storage/cover_images/{{$post->cover_image}}" alt="{{ $post->slug }}" style="width:320px; height:auto">
+                                            <a href="{{ route('blog.article', ['slug' => $post->slug ]) }}"><img class="img-fluid img-thumbnail rounded mb-0 filter" src="/storage/cover_images/{{$post->cover_image}}" alt="{{ $post->slug }}" style="width:320px; height:auto">
                                             </a>
                                         </div>
                                         <div class="col-md-8">

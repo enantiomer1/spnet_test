@@ -42,3 +42,16 @@ h1.h1-large {
 .speaker-tapes {
   font-size: 14px;
 }
+
+.grav-img {
+  border-radius: 10px;
+  border: 2px solid #DBDADA;
+}
+
+.single {
+  padding-left: 3rem;
+}
+
+#navigation > ul > li.nav-item.dropdown.show > div > a > p {
+  line-height: normal;
+}

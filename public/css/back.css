@@ -20344,3 +20344,7 @@ span.CodeMirror-selectedtext {
   margin-bottom: 0;
 }
 
+.badge {
+  padding: 0.4em 0.4em;
+}
+

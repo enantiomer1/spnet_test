@@ -15818,7 +15818,7 @@ textarea.form-control {
 
 .badge {
   border-radius: 8px;
-  padding: 6px 8px 7px 8px;
+  padding: 6px 8px 6px 8px;
   text-transform: uppercase;
   font-size: 0.7142em;
   line-height: 12px;
@@ -16456,8 +16456,8 @@ blockquote p {
 .navbar {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
   min-height: 53px;
   margin-bottom: 20px;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
@@ -16475,7 +16475,7 @@ blockquote p {
 .navbar p {
   display: inline-block;
   margin: 0;
-  line-height: 21px;
+  line-height: 42px;
 }
 
 .navbar .navbar-nav.navbar-logo {
@@ -16504,7 +16504,7 @@ blockquote p {
 .navbar .navbar-nav .nav-link:not(.btn) {
   text-transform: uppercase;
   font-size: 0.9em;
-  padding: 0.5rem 0.7rem;
+  padding: 0 10px;
   line-height: normal;
 }
 
@@ -19790,5 +19790,18 @@ h1.h1-large {
 
 .speaker-tapes {
   font-size: 14px;
+}
+
+.grav-img {
+  border-radius: 10px;
+  border: 2px solid #DBDADA;
+}
+
+.single {
+  padding-left: 3rem;
+}
+
+#navigation > ul > li.nav-item.dropdown.show > div > a > p {
+  line-height: normal;
 }
 

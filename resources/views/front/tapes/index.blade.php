@@ -25,7 +25,7 @@
                                 <tr>
                                     <td>{{ $tape->speaker }}</td>
                                     <td>{{ $tape->title }}</td>
-                                    <td class="text-center"><a href="/storage/audio_files/{{$tape->file_name}}"><i class="fa fa-download pr-2" aria-hidden="true"></i></a></td>
+                                    <td class="text-center"><a rel="tooltip" title="Right click - Save link as - to Download" data-placement="bottom" href="/storage/audio_files/{{$tape->file_name}}"><i class="fa fa-download pr-2" aria-hidden="true"></i></a></td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -33,7 +33,7 @@
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            Right click and Save link as to Download
+                            
                         </div>
                     </div>
                 </div>
@@ -43,14 +43,29 @@
                     <div class="card-header">
                         <p class="text-primary font-weight-bold mb-0">Sandy Beach</p>
                     </div>
-                    <div class="card-body">
-                        <div class="chart-area">
-                        </div>
+                    <div class="card-body speaker-tapes">
+                         <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Speaker</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Download/Play</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($sandy as $sand)
+                                <tr>
+                                    <td>{{ $sand->speaker }}</td>
+                                    <td>{{ $sand->title }}</td>
+                                    <td class="text-center"><a rel="tooltip" title="Right click - Save link as - to Download" data-placement="bottom" href="/storage/audio_files/{{$sand->file_name}}"><i class="fa fa-download pr-2" aria-hidden="true"></i></a></td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
                     </div>
                     <div class="card-footer">
-                        <hr>
                         <div class="stats">
-                            Updated 3 minutes ago
+                            
                         </div>
                     </div>
                 </div>
