@@ -19,7 +19,8 @@ Route::post('contact-send', 'FrontController@send')->name('contact.send');
 |--------------------------------------------------------------------------
 */
 Auth::routes();
-Route::get('/dashboard', 'FrontController@dashboard')->name('dashboard');
+Route::get('/dashboard', 'ProfileController@dashboard')->name('dashboard');
+
 Route::get('/sponsor-search', 'ZipController@sponsor_search')->name('sponsor-search');
 Route::post('/sponsor-search/zip-search', 'ZipController@zip_search')->name('sponsor-search.search');
 

@@ -11,15 +11,6 @@ use App\Http\Requests\SendContactRequest;
 
 class FrontController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth')->only('dashboard');
-    }
 
     /**
      * Show the application home page.
@@ -62,18 +53,6 @@ class FrontController extends Controller
         $title = $post->title;
 
         return view('front.blog.article', compact('post', 'title'));
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function dashboard()
-    {
-        $title = ('Dashboard | SponsorNet');
-
-        return view('front.dashboard', compact('title'));
     }
 
     /**
