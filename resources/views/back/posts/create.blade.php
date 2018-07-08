@@ -48,14 +48,12 @@
 
                     <div class="form-group">
                         <label for="cover_image">{{ __('Select Image File for Featured Image') }}</label>
-                        <input type="file" name="cover_image" class="form-control-file" id="cover_image"
-                               value={{old('cover_image')}}></input>
+                        <input type="file" name="cover_image" class="form-control-file" id="cover_image" value={{old('cover_image')}}></input>
                     </div>
 
                     <div class="form-group pb-2">
                         <label for="content">{{ __('Content') }}</label>
-                        <textarea name="content" id="content" rows="10" class="form-control"
-                                  value={{old('content')}}></textarea>
+                        <textarea name="content" id="content" rows="10" class="form-control" value={{old('content')}}></textarea>
                     </div>
                     <div class="row">
                         <div class="col-md-5">
@@ -83,4 +81,4 @@
             </div>
         </div>
     </div>
-@stop
+@endsection

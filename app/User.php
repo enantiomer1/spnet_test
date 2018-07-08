@@ -2,10 +2,10 @@
 
 namespace App;
 
-use App\Post;
 use App\Comment;
-use Illuminate\Notifications\Notifiable;
+use App\Post;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 use jeremykenedy\LaravelRoles\Traits\HasRoleAndPermission;
 
 class User extends Authenticatable
@@ -13,7 +13,7 @@ class User extends Authenticatable
     use Notifiable;
     use HasRoleAndPermission;
 
-    protected $table = 'users';
+    protected $table   = 'users';
     public $timestamps = true;
 
     /**

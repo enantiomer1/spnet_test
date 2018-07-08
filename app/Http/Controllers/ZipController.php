@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Auth;
-use App\Zipdata;
-use App\User;
-use Illuminate\Http\Request;
 use App\Exceptions\GeneralException;
 use App\Http\Requests\ZipSearchRequest;
+use App\Zipdata;
+use Auth;
 
 class ZipController extends Controller
 {
@@ -35,8 +33,8 @@ class ZipController extends Controller
      */
     public function zip_search(ZipSearchRequest $request)
     {
-        $zipcode = $request->zipcode;
-        $d = $request->search_radius;
+        $zipcode          = $request->zipcode;
+        $d                = $request->search_radius;
         $get_matching_zip = Zipdata::where('zip_code', '=', $zipcode)->first();
 
         if ($get_matching_zip == null) {
@@ -45,7 +43,7 @@ class ZipController extends Controller
 
         $lat1 = $get_matching_zip->latitude;
         $lon1 = $get_matching_zip->longitude;
-        $r = 3959; // radius of the earth in miles
+        $r    = 3959; // radius of the earth in miles
 
         $latN = rad2deg(asin(sin(deg2rad($lat1)) * cos($d / $r) + cos(deg2rad($lat1)) * sin($d / $r) * cos(deg2rad(0))));
         $latS = rad2deg(asin(sin(deg2rad($lat1)) * cos($d / $r) + cos(deg2rad($lat1)) * sin($d / $r) * cos(deg2rad(180))));

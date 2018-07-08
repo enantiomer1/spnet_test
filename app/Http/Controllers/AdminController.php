@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Auth;
-use App\User;
 use App\Post;
-use App\Tag;
-use App\Category;
+use App\User;
+use Auth;
 use Illuminate\Http\Request;
 use jeremykenedy\LaravelRoles\Models\Role;
 
@@ -30,7 +28,7 @@ class AdminController extends Controller
      */
     public function admin()
     {
-        $user = Auth::user();
+        $user  = Auth::user();
         $users = User::all();
         $roles = Role::all();
         $posts = Post::take(10)->orderBy('created_at', 'desc')->get();

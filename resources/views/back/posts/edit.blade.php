@@ -12,8 +12,7 @@
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="title">{{ __('Title') }}</label>
-                        <textarea name="title" id="title" rows="5" class="form-control"
-                                  value={{old( 'title')}}> {{ $post->title}}</textarea>
+                        <textarea name="title" id="title" rows="5" class="form-control" value={{old( 'title')}}> {{ $post->title }}</textarea>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
@@ -53,18 +52,15 @@
                     </div>
                     <div class="form-group">
                         <label for="summary">Summary</label>
-                        <textarea name="summary" id="summary" rows="5" class="form-control"
-                                  value={{old( 'summary')}}> {{ $post->summary}}</textarea>
+                        <textarea name="summary" id="summary" rows="5" class="form-control" value={{old( 'summary')}}> {{ $post->summary}}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="cover_image">Select Image File for Featured Image</label>
-                        <input type="file" name="cover_image" class="form-control-file" id="cover_image"
-                               value={{old( 'cover_image')}}> {{ $post->cover_image}}</input>
+                        <input type="file" name="cover_image" class="form-control-file" id="cover_image" value={{old( 'cover_image')}}> {{ $post->cover_image}}</input>
                     </div>
                     <div class="form-group pb-2">
                         <label for="content">Content</label>
-                        <textarea name="content" id="content" rows="10" class="form-control"
-                                  value={{old( 'content')}}> {{ $post->content}}</textarea>
+                        <textarea name="content" id="content" rows="10" class="form-control" value={{old( 'content')}}> {{ $post->content}}</textarea>
                     </div>
                     <div class="row">
                         <div class="col-md-5">
@@ -93,4 +89,4 @@
             </div>
         </div>
     </div>
-@stop
+@endsection

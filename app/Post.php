@@ -2,13 +2,13 @@
 
 namespace App;
 
-use App\User;
-use App\Tag;
 use App\Category;
 use App\Comment;
+use App\Tag;
+use App\User;
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Cviebrock\EloquentSluggable\Sluggable;
 
 class Post extends Model
 {
@@ -33,8 +33,8 @@ class Post extends Model
     {
         return [
             'slug' => [
-                'source' => 'title'
-            ]
+                'source' => 'title',
+            ],
         ];
     }
 

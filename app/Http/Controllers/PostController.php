@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Auth;
-use App\User;
+use App\Category;
 use App\Post;
 use App\Tag;
-use App\Category;
+use App\User;
+use Auth;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -42,9 +42,9 @@ class PostController extends Controller
     public function create()
     {
         $categories = Category::all();
-        $tags = Tag::all();
-        $user = Auth::user();
-        $post = new Post();
+        $tags       = Tag::all();
+        $user       = Auth::user();
+        $post       = new Post();
 
         if ($categories->count() == 0 || $tags->count() == 0) {
             return redirect()->back()->withFlashInfo('You must have some categories and tags before attempting to create a post.');
@@ -61,13 +61,13 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required|max:255',
-            'summary' => 'required',
-            'content' => 'required',
+            'title'       => 'required|max:255',
+            'summary'     => 'required',
+            'content'     => 'required',
             'category_id' => 'required',
-            'tags' => 'required',
-            'status' => 'required',
-            'cover_image' => 'image|nullable|max:50000'
+            'tags'        => 'required',
+            'status'      => 'required',
+            'cover_image' => 'image|nullable|max:50000',
         ]);
 
         // Handle File Upload
@@ -87,12 +87,12 @@ class PostController extends Controller
         }
 
         $post = Post::create([
-            'title' => $request->title,
-            'summary' => $request->summary,
-            'content' => $request->content,
-            'user_id' => auth()->id(),
-            'status' => $request->status,
-            'cover_image' => $fileNameToStore
+            'title'       => $request->title,
+            'summary'     => $request->summary,
+            'content'     => $request->content,
+            'user_id'     => auth()->id(),
+            'status'      => $request->status,
+            'cover_image' => $fileNameToStore,
         ]);
 
         $post->tags()->attach($request->tags);
@@ -120,9 +120,9 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        $post = Post::find($id);
-        $categories = Category::all();
-        $tags = Tag::all();
+        $post        = Post::find($id);
+        $categories  = Category::all();
+        $tags        = Tag::all();
         $current_cat = $post->categories;
         $current_tag = $post->tags;
 
@@ -138,13 +138,13 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'title' => 'required|max:255',
-            'summary' => 'required',
-            'content' => 'required',
+            'title'       => 'required|max:255',
+            'summary'     => 'required',
+            'content'     => 'required',
             'category_id' => 'required',
-            'tags' => 'required',
-            'status' => 'required',
-            'cover_image' => 'image|nullable|max:50000'
+            'tags'        => 'required',
+            'status'      => 'required',
+            'cover_image' => 'image|nullable|max:50000',
         ]);
 
         $post = Post::find($id);
@@ -165,11 +165,11 @@ class PostController extends Controller
             $fileNameToStore = 'noimage.jpg';
         }
 
-        $post->title = $request->title;
-        $post->summary = $request->summary;
-        $post->content = $request->content;
-        $post->user_id = auth()->id();
-        $post->status = $request->status;
+        $post->title       = $request->title;
+        $post->summary     = $request->summary;
+        $post->content     = $request->content;
+        $post->user_id     = auth()->id();
+        $post->status      = $request->status;
         $post->cover_image = $fileNameToStore;
         $post->save();
 

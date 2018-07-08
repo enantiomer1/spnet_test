@@ -3,9 +3,11 @@
 @section('content')
     <div class="section">
         <div class="container">
+             <h3 class="title pb-2 text-center">{{ __('Contact US') }}</h3>
+        <div class="separator separator-primary"></div>
             <div class="row justify-content-center">
                 <div class="col-md-10">
-                    <div class="card">
+                    <div class="card mt-4">
                         <div class="card-header">{{ __('Send us a message:') }}</div>
                         <div class="card-body">
                             <form method="POST" action="{{ route('contact.send') }}">
